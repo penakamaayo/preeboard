@@ -44,3 +44,6 @@ gem 'haml-rails', '~> 0.5.3'
 gem 'rails_12factor'
 
 gem 'thin'
+
+gem 'devise'
+
