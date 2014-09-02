@@ -1,0 +1,73 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "pree_board"
+    = csrf_meta_tags
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag "flatly", :media => "all"
+    = yield(:page_stylesheet) if content_for?(:page_stylesheet)
+
+
+  %body
+    %nav.navbar.navbar-default{role: "navigation"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{href: "/"} pree-board
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to "Home", "/"
+            %li
+              %a{href: "#"}
+                Log
+                / = current_user ? "out, " + current_user.last_name.capitalize : "in"
+
+    .container
+      - if notice
+        %p.alert.alert-success= notice
+      - if alert
+        %p.alert.alert-danger= alert
+
+      = yield
+
+      .container
+        .row
+          .col-md-4.col-md-offset-4
+            .panel.panel-default
+              .panel-heading
+                %h3.panel-title Please sign in
+              .panel-body
+                %form{"accept-charset" => "UTF-8", :role => "form"}
+                  %fieldset
+                    .form-group
+                      %input.form-control{:name => "email", :placeholder => "E-mail", :type => "text"}/
+                    .form-group
+                      %input.form-control{:name => "password", :placeholder => "Password", :type => "password", :value => ""}/
+                    .checkbox
+                      %label
+                        %input{:name => "remember", :type => "checkbox", :value => "Remember Me"}/
+                        Remember Me
+                    %input.btn.btn-lg.btn-primary.btn-block{:type => "submit", :value => "Login"}/
+
+    .footer
+      .container
+        %p.text-muted
+          Copyright ©2014 penyah
+    
+
+    /
+      Javascripts
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag "flatly"
+    = yield(:page_javascript) if content_for?(:page_javascript)
