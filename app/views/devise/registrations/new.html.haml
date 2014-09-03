@@ -30,7 +30,9 @@
               = f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Password Confirmation", :class => "form-control"
             
             .form-group
-              = f.date_field :birth_date, :placeholder => "Birth Date", :class => "form-control" 
+              = f.label :birth_date
+              %br/
+              = f.date_select :birth_date, :auto_focus => true, :type => "button", :start_year => 1930, :class => "form-control" 
 
             .form-group
               = f.submit "Submit", :class => "btn btn-lg btn-success btn-block"
