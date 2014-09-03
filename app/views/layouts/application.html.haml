@@ -19,16 +19,27 @@
           %ul.nav.navbar-nav
             %li
               = link_to "Home", "/"
-            %li
-              %a{href: "#"}
-                Log
-                / = current_user ? "out, " + current_user.last_name.capitalize : "in"
+            - if user_signed_in?
+              %li
+                = link_to   "Logout, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
+            - else
+              %li= link_to "Login", new_user_session_path, :method => :get
 
     .container
       - if notice
-        %p.alert.alert-success= notice
+        .alert.alert-success.alert-dismissible{:role => "alert"}
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+            %span.sr-only Close
+          %strong 
+            = notice
       - if alert
-        %p.alert.alert-danger= alert
+        .alert.alert-danger.alert-dismissible{:role => "alert"}
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+            %span.sr-only Close
+          %strong 
+            = alert
 
       = yield
 
