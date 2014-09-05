@@ -18,12 +18,23 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              = link_to "Home", "/"
+              - if admin_signed_in?
+                = link_to "Home", dashboard_index_url
+              - elsif user_signed_in?
+                = link_to "Home", "/"
+              - else
+                = link_to "Home", "#"
             - if user_signed_in?
               %li
                 = link_to   "Logout, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
             - else
-              %li= link_to "Login", new_user_session_path, :method => :get
+              - unless admin_signed_in?
+                %li= link_to "Login", new_user_session_path, :method => :get
+
+            - if admin_signed_in?
+              %li
+                = link_to   "Logout, #{current_admin.last_name}", destroy_admin_session_path ,  :method => :delete
+
 
     .container
       - if notice
