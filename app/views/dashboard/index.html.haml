@@ -1,1 +1,20 @@
 %h1 Users
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Course
+    %th School
+    %th	Email
+    %th
+
+  - @users.each do |user|
+    %tr
+      %td= user.first_name
+      %td= user.last_name
+      %td= user.course
+      %td= user.school
+      %td= user.email
+%br
+
