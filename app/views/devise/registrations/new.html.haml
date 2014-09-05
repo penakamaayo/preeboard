@@ -27,7 +27,7 @@
             .form-group
               = f.label :birth_date
               %br/
-              = f.date_select :birth_date,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :start_year => 1989
+              = f.date_select :birth_date,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, :start_year => 1989, :autofocus => true
 
             .form-group
               = f.password_field :password, autocomplete: "off", :placeholder => "Password (8 chracters minumum)", :class => "form-control"
@@ -42,7 +42,7 @@
               
               .col-md-6.form-group
                 = link_to "Sign In" , new_user_session_path , :class => "btn btn-lg btn-success btn-block"
-  .col-md-4
+  .col-md-3
     -unless resource.errors.empty?
       .alert.alert-danger.alert-dismissible{:role => "alert"}
         %button.close{"data-dismiss" => "alert", :type => "button"}
