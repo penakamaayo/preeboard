@@ -1,7 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 select{
   @extend .form-control;
 }
@@ -30,4 +29,20 @@ input[type=password]{
 
 label{
 	margin-top: 20px;
+}
+
+.navbar-default .navbar-brand {
+	font-size: 30px;
+    color: #74c7d5;
+    font-weight: 400;
+}
+
+.navbar {
+	background-color: white;
+    margin:0;
+    border-radius:0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #74c7d5;
 }
