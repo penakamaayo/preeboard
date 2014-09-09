@@ -21,3 +21,13 @@ table{
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: rgba(0,0,35,0.2);
 }
+
+input[type=text],
+input[type=email],
+input[type=password]{
+	height: 50px;
+}
+
+label{
+	margin-top: 20px;
+}

@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title pre-board
+    %title eksam.ph
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -14,31 +14,37 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{href: "/"} asdf
-        .navbar-collapse.collapse
+          %a.navbar-brand{href: "/#header-section"} EKSAM.PH
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{:href => "#header-section"} HOME
-            %li
-              %a{:href => "#about-section"} ABOUT
-            %li
-              %a{:href => "#price-section"} PRICING
-            %li
-              %a{:href => "#contact-section"} CONTACT
+            - if request.env['PATH_INFO'] == "/"
+              %li
+                %a{:href => "#header-section"} HOME
+              %li
+                %a{:href => "#about-section"} ABOUT
+              %li
+                %a{:href => "#price-section"} PRICING
+              %li
+                %a{:href => "#contact-section"} CONTACT
             
+            - else
+              %li= link_to "HOME", "/#header-section", :method => :get
+              %li= link_to "ABOUT", "/#about-section", :method => :get
+              %li= link_to "PRICING", "/#price-section", :method => :get
+              %li= link_to "CONTACT US", "/#contact-section", :method => :get          
             
             - if user_signed_in?
               %li
-                = link_to   "Logout, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
+                = link_to   "LOGOUT, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
             - else
               - unless admin_signed_in?
-                %li= link_to "Login", new_user_session_path, :method => :get
+                %li= link_to "LOGIN", new_user_session_path, :method => :get
 
             - if admin_signed_in?
               %li
-                = link_to   "Logout, #{current_admin.last_name}", destroy_admin_session_path ,  :method => :delete
+                = link_to   "LOGOUT, #{current_admin.last_name}", destroy_admin_session_path ,  :method => :delete
 
-    .container
+    .container.main
       - if notice
         .alert.alert-success.alert-dismissible{:role => "alert"}
           %button.close{"data-dismiss" => "alert", :type => "button"}
