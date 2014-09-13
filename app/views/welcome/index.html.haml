@@ -1,182 +1,165 @@
 / END NAV SECTION
 / HEADER SECTION
-#header-section
+
+#header-section.jumbotron
   .container
-    .row.main-top-margin
-      .col-md-6.col-md-offset-3
-        .text-center
-          %i.fa.fa-briefcase.main-icon
-          %br/
-    .row.main-low-margin
-      .col-md-12
-        .text-center
-          %h2.head-line ...
+    .message-box.clearfix
+      .left-col.flexslider.home-slider
+        %ul.slides
+          %li
+            %p LICENSURE
+          %li
+            %p BOARD
+          %li
+            %p ENTRANCE
+      .right-col
+        %p
+          EXAMS
+          %br
+          Made
+          %span EASY
+
+/ #header-section
+/   .container
+/     .row.main-top-margin
+/       .col-md-6.col-md-offset-3
+/         .text-center
+/           %i.fa.fa-briefcase.main-icon
+/           %br/
+/     .row.main-low-margin
+/       .col-md-12
+/         .text-center
+/           %h2.head-line ...
 / END HEADER SECTION
-/ ABOUT SECTION
-#about-section.section
-  .container
-    .row.main-low-margin
-      .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
-        %h1 Our Profile
-        %h5
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-.container
-  .row.main-low-margin.text-center
-    .col-md-4.col-sm-4
-      %i.fa.fa-flask.fa-5x.color-brown
-      %h3 TESTED DESIGN
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-    .col-md-4.col-sm-4
-      %i.fa.fa-pencil.fa-5x.color-blue
-      %h3 EASY TO CUSTOMIZE
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-    .col-md-4.col-sm-4
-      %i.fa.fa-thumbs-up.fa-5x.color-black
-      %h3 WELL DOCUMENTED
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-.space-bottom
-/ END ABOUT SECTION
-/ PARALLAX SECTION ONE
-%section#story-freext
-  %article
-    %h3
-      %i.fa.fa-flask
-      Lorem ipsum dolor sit amet
-    %span
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      %br/
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  .parallax{"data-velocity" => "-.3"}
-/ END PARALLAX SECTION ONE
-/ PRICE SECTION
-#price-section.section
-  .container
-    .row.main-low-margin
-      .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
-        %h1 Pricing Details
-        %h5
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-#pricing-section.container
-  .main-low-margin.col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1.margin-top-100
-    #pricing-table.row
-      .col-md-4.col-sm-4
-        %ul.plan-main
-          %li.plan-name Starter
-          %li.plan-price $ 100
-          %li 5GB Storage
-          %li 1GB Space
-          %li 200 Bandwidth
-          %li 100 Email Address
-          %li 24x7 Support
-          %li Live Chat
-          %li.plan-action
-            %a.btn.btn-primary.btn-lg{:href => "#"} Signup
-      .col-md-4.col-sm-4
-        %ul.plan-main.featured.active
-          %li.plan-name Medium
-          %li.plan-price $ 200
-          %li 5GB Storage
-          %li 1GB Space
-          %li 200 Bandwidth
-          %li 100 Email Address
-          %li 24x7 Support
-          %li Live Chat
-          %li.plan-action
-            %a.btn.btn-primary.btn-lg{:href => "#"} Signup
-      .col-md-4.col-sm-4
-        %ul.plan-main
-          %li.plan-name Advance
-          %li.plan-price $ 300
-          %li 5GB Storage
-          %li 1GB Space
-          %li 200 Bandwidth
-          %li 100 Email Address
-          %li 24x7 Support
-          %li Live Chat
-          %li.plan-action
-            %a.btn.btn-primary.btn-lg{:href => "#"} Signup
-  / ./ Row Content
-.space-bottom
-/ END PRICE SECTION
-/ PARALLAX SECTION TWO
-%section#story-two
-  %article
-    %h3
-      %i.fa.fa-desktop
-      Lorem ipsum dolor sit amet
-    %span
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      %br/
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  .parallax{"data-velocity" => "-.1"}
-  .parallax{"data-fit" => "125", "data-velocity" => "-.5"}
+/ / ABOUT SECTION
+/ #about-section.section
+/   .container
+/     .row.main-low-margin
+/       .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+/         %h1 Our Profile
+/         %h5
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/ .container
+/   .row.main-low-margin.text-center
+/     .col-md-4.col-sm-4
+/       %i.fa.fa-flask.fa-5x.color-brown
+/       %h3 TESTED DESIGN
+/       %p
+/         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/     .col-md-4.col-sm-4
+/       %i.fa.fa-pencil.fa-5x.color-blue
+/       %h3 EASY TO CUSTOMIZE
+/       %p
+/         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/     .col-md-4.col-sm-4
+/       %i.fa.fa-thumbs-up.fa-5x.color-black
+/       %h3 WELL DOCUMENTED
+/       %p
+/         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/ .space-bottom
+/ / END ABOUT SECTION
+/ / PARALLAX SECTION ONE
+/ %section#story-freext
+/   %article
+/     %h3
+/       %i.fa.fa-flask
+/       Lorem ipsum dolor sit amet
+/     %span
+/       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/       %br/
+/       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/   .parallax{"data-velocity" => "-.3"}
+/ / END PARALLAX SECTION ONE
+/ / PRICE SECTION
+/ #price-section.section
+/   .container
+/     .row.main-low-margin
+/       .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+/         %h1 Pricing Details
+/         %h5
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/           Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+/ #pricing-section.container
+/   .main-low-margin.col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1.margin-top-100
+/     #pricing-table.row
+/       .col-md-4.col-sm-4
+/         %ul.plan-main
+/           %li.plan-name Starter
+/           %li.plan-price $ 100
+/           %li 5GB Storage
+/           %li 1GB Space
+/           %li 200 Bandwidth
+/           %li 100 Email Address
+/           %li 24x7 Support
+/           %li Live Chat
+/           %li.plan-action
+/             %a.btn.btn-primary.btn-lg{:href => "#"} Signup
+/       .col-md-4.col-sm-4
+/         %ul.plan-main.featured.active
+/           %li.plan-name Medium
+/           %li.plan-price $ 200
+/           %li 5GB Storage
+/           %li 1GB Space
+/           %li 200 Bandwidth
+/           %li 100 Email Address
+/           %li 24x7 Support
+/           %li Live Chat
+/           %li.plan-action
+/             %a.btn.btn-primary.btn-lg{:href => "#"} Signup
+/       .col-md-4.col-sm-4
+/         %ul.plan-main
+/           %li.plan-name Advance
+/           %li.plan-price $ 300
+/           %li 5GB Storage
+/           %li 1GB Space
+/           %li 200 Bandwidth
+/           %li 100 Email Address
+/           %li 24x7 Support
+/           %li Live Chat
+/           %li.plan-action
+/             %a.btn.btn-primary.btn-lg{:href => "#"} Signup
+/   / ./ Row Content
+/ .space-bottom
+/ / END PRICE SECTION
+/ / PARALLAX SECTION TWO
+/ %section#story-two
+/   %article
+/     %h3
+/       %i.fa.fa-desktop
+/       Lorem ipsum dolor sit amet
+/     %span
+/       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/       %br/
+/       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+/   .parallax{"data-velocity" => "-.1"}
+/   .parallax{"data-fit" => "125", "data-velocity" => "-.5"}
 / END PARALLAX SECTION TWO
 / CONTACT SECTION
 #contact-section.section
-  .container
+  .container#contact
+    %center
+      %h1 Keep calm and study, Exams are coming..
     .row.main-low-margin
-      .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
-        %h1 Contact Us
-        %h5
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-.space-top
-.container
-  .row
-    .col-md-12.col-sm-12
-      .col-md-6.col-sm-12
-        %h3 Physical Address
-        %hr/
+      .col-md-6.col-md-offset-3
+        .input-group
+          %input.form-control.input-lg{:type => "text", :placeholder => 'Enter your email address'}
+          %span.input-group-btn
+            %button.btn.btn-primary.btn-lg{:type => "button"} Sign Up
+        
         %p
-          103, New Street,
-          %br/
-          New York, USA.
-          %br/
-          Call: +23-00-89-009
-          %br/
-          Email: demo@yourdomain.com
-          %br/
-      .col-md-6.col-sm-12
-        %h3 Need Help ? Write Us.
-        %hr/
-        %form
-          .row
-            .col-md-6.col-sm-6
-              .form-group
-                %input.form-control{:placeholder => "Name", :required => "required", :type => "text"}/
-            .col-md-6.col-sm-6
-              .form-group
-                %input.form-control{:placeholder => "Email address", :required => "required", :type => "text"}/
-          .row
-            .col-md-12.col-sm-12
-              .form-group
-                %textarea#message.form-control{:name => "message", :placeholder => "Message", :required => "required", :rows => "3"}
-              .form-group
-                %button.btn.btn-primary{:type => "submit"} Submit Request
-  / ./ Row Content
-.space-top
-/ END CONTACT SECTION
-/ FOOTER SECTION
+          we're launching any day now. sign up to be the first to know!
