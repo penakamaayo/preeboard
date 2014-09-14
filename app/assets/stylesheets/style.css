@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Lato, sans-serif;
-    color:#74c7d5;
+    color: #00003A;
     line-height: 40px;
 }
 
@@ -129,7 +129,7 @@ p {
 
 
 .section {
-    background:#74C7D5;
+    background: #00003A;
     color: #fff;
 }
 
@@ -137,8 +137,11 @@ p {
    PRICE SECTION
    ========================================================================== */
 
-#header-section {
+element{
     height: 1000px;
+}
+
+#header-section {
 }
 
 .active {
@@ -224,7 +227,7 @@ p {
    ============================================================*/
 .navbar {
     font-family: Lato, sans-serif;
-    color:#74c7d5;
+    color: #00003A;
     font-size: 18px;
 
 }
@@ -291,7 +294,7 @@ section article {
 }
 #contact-section {
     height: 100%;
-    background:#74C7D5;
+    background: #00003A;
     color:#fff;
     padding:80px 0;
 }
@@ -362,7 +365,7 @@ section article {
 
 
 #footer {
-    background-color: #74C7D5;
+    background-color: #00003A;
     font-color: #fff;
     padding: 30px;
 }
