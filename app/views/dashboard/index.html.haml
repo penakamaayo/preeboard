@@ -1,20 +1,37 @@
-%h1 Users
+/ %h1 Users
 
-%table
-  %tr
-    %th First name
-    %th Last name
-    %th Course
-    %th School
-    %th	Email
-    %th
+/ %table
+/   %tr
+/     %th First name
+/     %th Last name
+/     %th Course
+/     %th School
+/     %th	Email
+/     %th
 
-  - @users.each do |user|
+/   - @users.each do |user|
+/     %tr
+/       %td= user.first_name
+/       %td= user.last_name
+/       %td= user.course
+/       %td= user.school
+/       %td= user.email
+
+/ %br
+
+.container
+  %h1 Subscribers
+
+  %table
     %tr
-      %td= user.first_name
-      %td= user.last_name
-      %td= user.course
-      %td= user.school
-      %td= user.email
-%br
+      %th 
+      %th Email
+      %th
+
+    - @subscribers.each.with_index(1) do |subscriber,index|
+      %tr
+        %td= "#{index}."
+        %td= subscriber.email
+
+  %br
 

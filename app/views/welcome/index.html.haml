@@ -154,12 +154,13 @@
   .container#contact
     %center
       %h1 Keep calm and study, Exams are coming..
+
     .row.main-low-margin
       .col-md-6.col-md-offset-3
-        .input-group
-          %input.form-control.input-lg{:type => "text", :placeholder => 'Enter your email address'}
-          %span.input-group-btn
-            %button.btn.btn-primary.btn-lg{:type => "button"} Sign Up
-        
+        = form_for Subscriber.new, url: subscribers_path, :method => :post, :role => "form" do |f|
+          .input-group    
+            = f.email_field :email, :autofocus => true, :placeholder => "Enter your email address", :class => "form-control input-lg", :required => true
+            %span.input-group-btn
+              = f.submit "Sign Up", :class => "btn btn-primary btn-lg"
         %p
           we're launching any day now. sign up to be the first to know!

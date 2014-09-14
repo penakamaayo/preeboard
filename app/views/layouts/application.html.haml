@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title eksam.ph
+    %title boardsims.ph
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Pacifico'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cookie'
@@ -28,24 +28,24 @@
               / %li
               /   %a{:href => "#price-section"} PRICING
               %li
-                %a{:href => "#contact-section"} CONTACT
+                %a{:href => "#contact-section"} SUBSCRIBE
             
             - else
               %li= link_to "HOME", "/#header-section", :method => :get
               / %li= link_to "ABOUT", "/#about-section", :method => :get
               / %li= link_to "PRICING", "/#price-section", :method => :get
-              %li= link_to "CONTACT US", "/#contact-section", :method => :get          
+              %li= link_to "SUBSCRIBE", "/#contact-section", :method => :get          
             
-            - if user_signed_in?
-              %li
-                = link_to   "LOGOUT, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
-            - else
-              - unless admin_signed_in?
-                %li= link_to "LOGIN", new_user_session_path, :method => :get
+            / - if user_signed_in?
+            /   %li
+            /     = link_to   "LOGOUT, #{current_user.last_name}", destroy_user_session_path ,  :method => :delete
+            / - else
+            /   - unless admin_signed_in?
+            /     %li= link_to "LOGIN", new_user_session_path, :method => :get
 
-            - if admin_signed_in?
-              %li
-                = link_to   "LOGOUT, #{current_admin.last_name}", destroy_admin_session_path ,  :method => :delete
+            / - if admin_signed_in?
+            /   %li
+            /     = link_to   "LOGOUT, #{current_admin.last_name}", destroy_admin_session_path ,  :method => :delete
 
     .container.main
       - if notice
